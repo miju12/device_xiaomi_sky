@@ -94,6 +94,9 @@
          the restoring is handled by modem if it is true -->
     <bool name="skip_restoring_network_selection">true</bool>
 
+    <!-- Whether the new Auto Selection Network UI should be shown -->
+    <bool name="config_enableNewAutoSelectNetworkUI">true</bool>
+
     <!-- Whether to adopt the predefined handover policies for IWLAN.
          {@see CarrierConfigManager#KEY_IWLAN_HANDOVER_POLICY_STRING_ARRAY}
     -->
