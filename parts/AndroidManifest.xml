@@ -28,15 +28,17 @@
     <uses-permission android:name="android.permission.VIBRATE" />
 
     <uses-sdk
-        android:minSdkVersion="24"
-        android:targetSdkVersion="24"/>
+        android:minSdkVersion="33"
+        android:targetSdkVersion="33"/>
 
     <application
         android:label="@string/device_settings_app_name"
         android:persistent="true">
 
-        <receiver android:name=".BootCompletedReceiver" android:exported="true">
-            <intent-filter android:priority="1000">
+        <receiver 
+		android:name=".BootCompletedReceiver" 
+		android:exported="true">
+		<intent-filter android:priority="1000">
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
