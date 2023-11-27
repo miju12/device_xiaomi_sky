@@ -396,7 +396,15 @@ PRODUCT_PACKAGES += \
     SettingsResCommon \
     TelephonyResCommon \
     WifiResCommon \
-    WifiResTarget
+    WifiResTarget \
+		SkyCNSettingsProviderOverlay \
+		SkyCNWifiOverlay \
+		SkyGLSettingsProviderOverlay\
+		SkyGLWifiOverlay \
+		SkyGLOBALSettingsProviderOverlay\
+		SkyGLOBALWifiOverlay \
+		SkyINSettingsProviderOverlay \
+		SkyINWifiOverlay
 
 # Secure element
 PRODUCT_PACKAGES += \
@@ -531,5 +539,3 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor
-
-
