@@ -8,6 +8,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/bliss_sky.mk
 
 COMMON_LUNCH_CHOICES := \
-    bliss_sky-ap1a-eng \
-    bliss_sky-ap1a-userdebug \
-    bliss_sky-ap1a-user
+    bliss_sky-ap2a-eng \
+    bliss_sky-ap2a-userdebug \
+    bliss_sky-ap2a-user

@@ -318,7 +318,7 @@ sys.usb.mtp.batchcancel=1
 vendor.qcom.vibrator.led.enable_effects=1
 vendor.qcom.vibrator.led.mv_max=3544
 vendor.qcom.vibrator.led.mv_min=1504
-vendor.qcom.vibrator.led.effect_ms_multiplier=8
+vendor.qcom.vibrator.led.effect_ms_multiplier=5
 
 # WiFi
 wifi.aware.interface=wifi-aware0
