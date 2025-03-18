@@ -111,9 +111,8 @@ TARGET_BOOT_ANIMATION_RES := 1080
 
 # Boot control
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-impl-qti:64 \
-    android.hardware.boot@1.2-impl-qti.recovery:64 \
-    android.hardware.boot@1.2-service \
+    android.hardware.boot-service.qti \
+    android.hardware.boot-service.qti.recovery \
     bootctrl.parrot \
     bootctrl.parrot.recovery
 
