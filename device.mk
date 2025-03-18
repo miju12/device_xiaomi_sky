@@ -118,9 +118,6 @@ PRODUCT_PACKAGES += \
     bootctrl.parrot \
     bootctrl.parrot.recovery
 
-PRODUCT_PACKAGES_DEBUG += \
-    bootctl:64
-
 # Camera
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
