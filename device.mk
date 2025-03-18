@@ -116,8 +116,6 @@ PRODUCT_PACKAGES += \
     bootctrl.parrot \
     bootctrl.parrot.recovery
 
-PRODUCT_PACKAGES_DEBUG += \
-    bootctl
 
 # Camera
 PRODUCT_COPY_FILES += \
