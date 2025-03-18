@@ -1,12 +1,3 @@
-echo 'Outer tune Repo'
-
-# Outertune music app
-git clone https://github.com/dhanush281/packages_apps_extrapacks.git packages/apps/OuterTune
-
-echo "done"
-
-echo "Cloning Basic Call recorder..."
-
 # BCR
 git clone https://github.com/suvojit213/vendor_bcr.git vendor/bcr
 
