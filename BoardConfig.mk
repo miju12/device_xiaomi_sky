@@ -114,6 +114,7 @@ BOARD_KERNEL_CMDLINE := \
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
+    kpti=off \
     androidboot.memcg=1 \
     androidboot.usbcontroller=a600000.dwc3 \
     androidboot.init_fatal_reboot_target=recovery
