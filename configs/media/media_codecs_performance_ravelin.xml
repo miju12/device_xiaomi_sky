@@ -162,4 +162,5 @@
             <Limit name="measured-frame-rate-1920x1080" range="23-33" />
         </MediaCodec>
     </Decoders>
+        <Include href="media_codecs_dolby_audio.xml" />
 </MediaCodecs>
