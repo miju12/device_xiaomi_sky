@@ -105,7 +105,6 @@ vendor/etc/audio_policy_engine_default_stream_volumes.xml
 vendor/etc/audio_policy_engine_product_strategies.xml
 vendor/etc/audio_policy_engine_stream_volumes.xml
 vendor/etc/kvh2xml.xml
-vendor/etc/microphone_characteristics.xml
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
