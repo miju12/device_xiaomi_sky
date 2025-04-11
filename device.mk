@@ -115,8 +115,6 @@ TARGET_BOOT_ANIMATION_RES := 1080
 PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti \
     android.hardware.boot-service.qti.recovery \
-    bootctrl.parrot \
-    bootctrl.parrot.recovery
 
 # Camera
 PRODUCT_COPY_FILES += \
@@ -393,7 +391,7 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH) \
-    hardware/pixelage/interfaces/power-libperfmgr \
+    hardware/lineage/interfaces/power-libperfmgr \
     hardware/google \
     hardware/google/interfaces \
     hardware/google/pixel \
@@ -524,7 +522,7 @@ PRODUCT_BOOT_JARS += \
     WfdCommon
 
 # BCR
-$(call inherit-product, vendor/bcr/bcr.mk)
+#(call inherit-product, vendor/bcr/bcr.mk)
 
 # Signed
 -include vendor/lineage-priv/keys/keys.mk
