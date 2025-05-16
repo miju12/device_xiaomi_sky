@@ -65,6 +65,7 @@ ro.vendor.audio.voice.change.support=true
 ro.vendor.audio.voice.change.version=2
 ro.vendor.audio.voice.change.youme.support=true
 ro.vendor.audio.voice.volume.boost=manual
+ro.vendor.audio.stereo_master_volume=1
 ro.vendor.audio.us.proximity=true
 ro.vendor.audio.us.proximity_waitfornegative_feature=true
 vendor.qc2audio.suspend.enabled=true
