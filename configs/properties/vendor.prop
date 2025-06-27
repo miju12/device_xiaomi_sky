@@ -329,3 +329,6 @@ sys.usb.mtp.batchcancel=1
 
 # WiFi
 wifi.aware.interface=wifi-aware0
+
+# Keystore
+ro.hardware.keystore_desede=true
