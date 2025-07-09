@@ -24,7 +24,6 @@ from extract_utils.main import (
 namespace_imports = [
     'device/xiaomi/sky',
     'hardware/qcom-caf/sm8450',
-    'hardware/qcom-caf/sm8450/audio/agm/ipc/HwBinders/legacy',
     'hardware/qcom-caf/wlan',
     'hardware/xiaomi',
     'vendor/qcom/opensource/commonsys/display',
@@ -53,36 +52,19 @@ lib_fixups: lib_fixups_user_type = {
     ): lib_fixup_vendor_suffix,
     (
         'libagm',
-        'libagmclient',
-        'libagmmixer',
+        'libar-acdb',
         'libar-pal',
+        'libats',
+        'liblx-osal',
         'libpalclient',
         'libsndcardparser',
         'libwpa_client',
-        'vendor.qti.hardware.pal@1.0-impl',
     ): lib_fixup_remove,
 }
 
 blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/nfc_nci.nqx.default.hw.so': blob_fixup()
 	.add_needed('libbase_shim.so'),
-    'vendor/etc/libnfc-nxp-pnscr.conf': blob_fixup()
-         .regex_replace(
- 	    'NXP_T4T_NFCEE_ENABLE=0x01', 'NXP_T4T_NFCEE_ENABLE=0x00'
- 	),
-    'system_ext/lib64/libwfdmmsrc_system.so': blob_fixup()
-        .add_needed('libgui_shim.so'),
-    'system_ext/lib64/libwfdnative.so': blob_fixup()
-        .add_needed('libinput_shim.so'),
-    'system_ext/lib64/libwfdservice.so': blob_fixup()
-        .replace_needed(
-            'android.media.audio.common.types-V2-cpp.so',
-            'android.media.audio.common.types-V4-cpp.so',
-        )
-        .replace_needed(
-            'android.hardware.common-V2-ndk_platform.so',
-            'android.hardware.common-V2-ndk.so',
-        ),
     (
         'vendor/bin/hw/android.hardware.security.keymint-service-qti',
         'vendor/lib64/libqtikeymint.so',
