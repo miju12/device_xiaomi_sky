@@ -1111,9 +1111,6 @@ vendor/bin/qtisetprop
 vendor/lib64/libsoc_helper.so
 vendor/lib64/libsoc_helper_jni.so
 
-# RIL - from salami OOS 11.C.51
-vendor/lib64/libqcrilNrSmsModule.so|eec750187d50e0c6df179d10bd656ee026259f86
-
 # RIL - from OS2.0.3.0.VMWINXM
 system_ext/priv-app/ims/ims.apk|fb9868575d9ad4456adf06e3cfb5f5b290b7337d
 system_ext/priv-app/QtiTelephony/QtiTelephony.apk|b80e1e063adabb802008c8427eda7f5780497ed6
@@ -1261,6 +1258,7 @@ vendor/lib64/libqcrilNrLogger.so
 vendor/lib64/libqcrilNrPbmModule.so
 vendor/lib64/libqcrilNrQtiBus.so
 vendor/lib64/libqcrilNrQtiMutex.so
+vendor/lib64/libqcrilNrSmsModule.so
 vendor/lib64/libqcrilNrSocketModule.so
 vendor/lib64/libqcrilNrVoiceModule.so
 vendor/lib64/libqcrildataaidl.so
