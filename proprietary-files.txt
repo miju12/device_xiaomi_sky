@@ -99,11 +99,6 @@ vendor/lib64/soundfx/libvisualizer.so
 
 # Audio configs
 vendor/etc/audio/sku_ravelin/audio_effects.conf
-vendor/etc/audio/sku_ravelin/mixer_paths_ravelin_idp.xml
-vendor/etc/audio/sku_ravelin/mixer_paths_ravelin_qrd.xml
-vendor/etc/audio/sku_ravelin/resourcemanager_ravelin_idp.xml
-vendor/etc/audio/sku_ravelin/resourcemanager_ravelin_qrd.xml
-vendor/etc/audio/sku_ravelin/resourcemanager_upd.xml
 vendor/etc/audio_policy_engine_configuration_mi.xml:vendor/etc/audio_policy_engine_configuration.xml
 vendor/etc/a2dp_audio_policy_configuration.xml
 vendor/etc/audio_policy_engine_default_stream_volumes.xml
@@ -111,7 +106,6 @@ vendor/etc/audio_policy_engine_product_strategies.xml
 vendor/etc/audio_policy_engine_stream_volumes.xml
 vendor/etc/kvh2xml.xml
 vendor/etc/microphone_characteristics.xml
-vendor/etc/usecaseKvManager.xml
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
