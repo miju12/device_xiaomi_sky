@@ -1111,10 +1111,6 @@ vendor/bin/qtisetprop
 vendor/lib64/libsoc_helper.so
 vendor/lib64/libsoc_helper_jni.so
 
-# RIL - from OS2.0.3.0.VMWINXM
-system_ext/priv-app/ims/ims.apk|fb9868575d9ad4456adf06e3cfb5f5b290b7337d
-system_ext/priv-app/QtiTelephony/QtiTelephony.apk|b80e1e063adabb802008c8427eda7f5780497ed6
-
 # RIL
 product/app/uimgbaservice/uimgbaservice.apk
 product/etc/permissions/UimGba.xml
@@ -1140,6 +1136,8 @@ system_ext/framework/vendor.qti.ims.rcssip-V1.2-java.jar
 system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar
 system_ext/framework/vendor.qti.ims.rcsuce-V1.1-java.jar
 system_ext/framework/vendor.qti.ims.rcsuce-V1.2-java.jar
+system_ext/priv-app/QtiTelephony/QtiTelephony.apk;REQUIRED=QtiTelephonyCompat
+system_ext/priv-app/ims/ims.apk;REQUIRED=QtiTelephonyCompat
 system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvt.so
 system_ext/lib64/lib-imsvtextutils.so
