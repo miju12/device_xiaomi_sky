@@ -643,6 +643,8 @@ vendor/lib64/libtestutils.so|61b98f252afde4eb7c674de870e7afb590c9bb2a
 vendor/lib64/libtinyxml2_1.so|ae0c9190fd54c18a6c28dfccdfd29655abcb08de
 
 # Display Configs
+product/etc/displayconfig/display_id_4630946796165144705.xml:vendor/etc/displayconfig/display_id_4630946796165144705.xml
+product/etc/displayconfig/display_id_4630946904973289089.xml:vendor/etc/displayconfig/display_id_4630946904973289089.xml
 vendor/etc/display/qdcm_calib_data_xiaomi_m19_36_02_0a_fhd_dsc_video_dsi_panel.json
 vendor/etc/display/qdcm_calib_data_xiaomi_m19_42_03_0b_fhd_dsc_video_dsi_panel.json
 vendor/etc/display/qdcm_calib_data_xiaomi_m19_42_03_0c_fhd_dsc_video_dsi_panel.json
