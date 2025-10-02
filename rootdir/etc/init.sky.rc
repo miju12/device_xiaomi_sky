@@ -7,40 +7,6 @@ on early-init
     write /sys/class/remoteproc/remoteproc2/recovery enabled
     write /sys/class/remoteproc/remoteproc3/recovery enabled
 
-on early-init && property:ro.boot.boardid=S88019BP1
-    setprop ro.boot.product.hardware.sku hcesimese
-    setprop ro.vendor.se.type eSE,HCE,UICC
-    setprop ro.vendor.se.chip.model SN100T
-
-on early-init && property:ro.boot.boardid=S88018PA1
-    setprop ro.boot.product.hardware.sku hcesimese
-    setprop ro.vendor.se.type eSE,HCE,UICC
-    setprop ro.vendor.se.chip.model SN100T
-
-on early-init && property:ro.boot.boardid=S88029JA1
-    setprop ro.boot.product.hardware.sku hcesim1ese
-    setprop ro.vendor.se.type eSE,HCE,UICC
-    setprop ro.vendor.se.chip.model SN100T
-
-on early-init && property:ro.boot.boardid=S88029EA1
-    setprop ro.boot.product.hardware.sku hcesim1ese
-    setprop ro.vendor.se.type eSE,HCE,UICC
-    setprop ro.vendor.se.chip.model SN100T
-
-on early-init && property:ro.boot.boardid=S88029AA1
-    setprop ro.boot.product.hardware.sku hcesim
-    setprop ro.vendor.se.type HCE,UICC
-
-on early-init && property:ro.product.device=river
-    setprop persist.vendor.nfc.factory.fwstatus unknown
-    setprop ro.vendor.nfc.repair 1
-    setprop ro.vendor.nfc.wallet_fusion 1
-    setprop ro.vendor.nfc.dispatch_optim 1
-
-on early-init && property:ro.product.device=XIG03
-    setprop ro.vendor.nfc.repair 1
-    setprop persist.vendor.nfc.factory.fwstatus unknown
-
 on early-init && property:ro.boot.hwc=CN
     setprop ro.miui.build.region cn
 
@@ -52,28 +18,6 @@ on early-init && property:ro.boot.hwc=India
 
 on early-init && property:ro.boot.hwc=Japan
     setprop ro.miui.build.region jp
-
-on boot
-    chown system system /sys/bus/platform/devices/soc:fpc1020/irq
-    chown system system /sys/bus/platform/devices/soc:fpc1020/wakeup_enable
-    chown system system /sys/bus/platform/devices/soc:fpc1020/modalias
-    chown system system /sys/bus/platform/devices/soc:fpc1020/compatible_all
-    chmod 0660 /sys/bus/platform/devices/soc:fpc1020/irq
-    chmod 0660 /sys/bus/platform/devices/soc:fpc1020/wakeup_enable
-    chmod 0660 /sys/bus/platform/devices/soc:fpc1020/modalias
-    chmod 0660 /sys/bus/platform/devices/soc:fpc1020/compatible_all
-
-    chmod 0777 /dev/goodix_fp
-
-on post-fs-data
-    mkdir /data/vendor/fpc 0777 system system
-    mkdir /data/vendor/goodix 0777 system system
-
-on property:vendor.fps_hal.restartimes=max
-	stop vendor.fps_hal_lc
-
-on property:sys.boot_completed=1
-    write /sys/class/thermal/thermal_message/sconfig 500
 
 on property:persist.sys.xtra-daemon.enabled=*
     restart loc_launcher
