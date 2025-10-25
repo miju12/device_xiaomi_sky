@@ -6,9 +6,6 @@ allow tee {
   mnt_vendor_file
   vendor_data_file
   vendor_fingerprint_data_file
-  vendor_qfp-daemon_data_file
-  vendor_persist_data_file
-  vendor_persist_qti_fp_file
 }:dir create_dir_perms;
 
 
@@ -16,8 +13,5 @@ allow tee {
   mnt_vendor_file
   vendor_data_file
   vendor_fingerprint_data_file
-  vendor_qfp-daemon_data_file
-  vendor_persist_data_file
-  vendor_persist_qti_fp_file
 }:file create_file_perms;
 

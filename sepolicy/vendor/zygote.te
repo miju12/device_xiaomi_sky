@@ -1,4 +1,0 @@
-allow shell zygote:unix_stream_socket getopt;
-allow platform_app zygote:unix_stream_socket getopt;
-allow priv_app zygote:unix_stream_socket getopt;
-allow system_app zygote:unix_stream_socket getopt;
