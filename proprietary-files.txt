@@ -1557,6 +1557,7 @@ vendor/app/TrustZoneAccessService/TrustZoneAccessService.apk
 vendor/firmware/aw87xxx_acf.bin
 
 # VM mem
+vendor/lib/libvmmem.so
 vendor/lib64/libvmmem.so
 
 # VM mgr
