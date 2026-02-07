@@ -238,6 +238,10 @@ swr_haptics_dlkm.ko
 stub_dlkm.ko
 wsa881x_dlkm.ko
 aw87xxx_dlkm.ko
+<<<<<<< HEAD
+=======
+fs15xx_dlkm.ko
+>>>>>>> aaee754 (sky: Switch to source build kernel)
 machine_dlkm.ko
 lpass_cdc_wsa2_macro_dlkm.ko
 lpass_cdc_wsa_macro_dlkm.ko
