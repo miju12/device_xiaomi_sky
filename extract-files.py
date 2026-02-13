@@ -124,6 +124,22 @@ blob_fixups: blob_fixups_user_type = {
         .add_line_if_missing('gettid: 1'),
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libhidlbase_shim.so'),
+    (
+        'vendor/bin/hw/vendor.qti.camera.provider@2.7-service_64',
+        'vendor/lib64/libaudiocloudctrl.so',
+        'vendor/lib64/libdpps.so',
+        'vendor/lib64/libsnapdragoncolor-manager.so',
+        'vendor/lib64/camx.device@3.4-ext-impl.so',
+        'vendor/lib64/camx.device@3.5-ext-impl.so',
+        'vendor/lib64/camx.device@3.6-ext-impl.so',
+        'vendor/lib64/camx.provider@2.4-external.so',
+        'vendor/lib64/camx.provider@2.4-impl.so',
+        'vendor/lib64/camx.provider@2.4-legacy.so',
+        'vendor/lib64/camx.provider@2.5-external.so',
+        'vendor/lib64/camx.provider@2.5-legacy.so',
+        'vendor/lib64/camx.provider@2.6-legacy.so',
+        'vendor/lib64/camx.provider@2.7-legacy.so',
+    ): blob_fixup().replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
