@@ -329,22 +329,16 @@
     </path>
 
     <path name="speaker">
-        <ctl name="RX_MACRO RX2 MUX" value="AIF2_PB" />
-        <ctl name="RX INT2_1 MIX1 INP0" value="RX2" />
-        <ctl name="AUX_RDAC Switch" value="1" />
-        <ctl name="RX_RX2 Digital Volume" value="80" />
-    </path>
-
-    <path name="mainmic-ata">
-        <path name="handset-mic" />
-    </path>
-
-    <path name="speaker-ata">
         <ctl name="aw87xxx_sence_switch_0" value="0" />
         <ctl name="FSM_Scene" value="6" />
         <ctl name="RX_MACRO RX2 MUX" value="AIF2_PB" />
         <ctl name="RX INT2_1 MIX1 INP0" value="RX2" />
         <ctl name="AUX_RDAC Switch" value="1" />
+        <ctl name="RX_RX2 Digital Volume" value="84" />
+    </path>
+
+    <path name="mainmic-ata">
+        <path name="handset-mic" />
     </path>
 
     <path name="speaker-mono-ata">
@@ -577,30 +571,12 @@
         <ctl name="RX INT1 DEM MUX" value="CLSH_DSM_OUT" />
         <ctl name="RX_COMP1 Switch" value="1" />
         <ctl name="RX_COMP2 Switch" value="1" />
+        <ctl name="RX_RX0 Digital Volume" value="84" />
+        <ctl name="RX_RX1 Digital Volume" value="84" />
         <ctl name="HPHL_COMP Switch" value="1" />
         <ctl name="HPHR_COMP Switch" value="1" />
         <ctl name="HPHL_RDAC Switch" value="1" />
         <ctl name="HPHR_RDAC Switch" value="1" />
-    </path>
-
-    <path name="headphones-glo-ce-gain">
-        <ctl name="RX_RX0 Digital Volume" value="74" />
-        <ctl name="RX_RX1 Digital Volume" value="74" />
-    </path>
-
-    <path name="headphones-glo-cs-gain">
-        <ctl name="RX_RX0 Digital Volume" value="84" />
-        <ctl name="RX_RX1 Digital Volume" value="84" />
-    </path>
-
-    <path name="headphones-in-cs-gain">
-        <ctl name="RX_RX0 Digital Volume" value="84" />
-        <ctl name="RX_RX1 Digital Volume" value="84" />
-    </path>
-
-    <path name="headphones-in-default-gain">
-        <ctl name="RX_RX0 Digital Volume" value="84" />
-        <ctl name="RX_RX1 Digital Volume" value="84" />
     </path>
 
     <path name="headphones-and-haptics">
@@ -642,6 +618,7 @@
     </path>
 
     <path name="voice-handset">
+        <ctl name="RX_RX0 Digital Volume" value="80" />
         <path name="handset" />
     </path>
 
@@ -663,10 +640,10 @@
 
     <path name="voice-speaker">
         <path name="speaker-mono" />
-        <ctl name="RX_RX2 Digital Volume" value="78" />
     </path>
 
     <path name="voice-speaker-stereo">
+        <ctl name="RX_RX0 Digital Volume" value="80" />
         <path name="speaker" />
     </path>
 
@@ -687,6 +664,7 @@
     </path>
 
     <path name="voice-speaker-stereo-vbat">
+        <ctl name="RX_RX0 Digital Volume" value="80" />
         <path name="speaker-vbat" />
     </path>
 

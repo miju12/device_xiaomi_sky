@@ -5,18 +5,8 @@ vendor/etc/acdbdata/nn_ns_models/fai__2.3.0_0.1__3.0.0_0.0__eai_1.36_enpu2_comp.
 vendor/etc/acdbdata/nn_ns_models/fai__2.7.20_0.0__3.0.0_0.0__eai_1.36_enpu2.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__2.7.2_0.0__3.0.0_0.0__eai_1.36_enpu2.pmd
 vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.36_enpu2.pmd
-vendor/etc/acdbdata/ravelin_qrd/QRD_ravelin_acdb_cal.acdb
-vendor/etc/acdbdata/ravelin_qrd/QRD_ravelin_workspaceFileXml.qwsp
-vendor/etc/acdbdata/ravelin_qrd_ato/QRD_ravelin_ato_acdb_cal.acdb
-vendor/etc/acdbdata/ravelin_qrd_ato/QRD_ravelin_ato_workspaceFileXml.qwsp
-vendor/etc/acdbdata/ravelin_qrd_cust/QRD_ravelin_cust_acdb_cal.acdb
-vendor/etc/acdbdata/ravelin_qrd_cust/QRD_ravelin_cust_workspaceFileXml.qwsp
-vendor/etc/acdbdata/ravelin_qrd_cust_eea/QRD_ravelin_eea_acdb_cal.acdb
-vendor/etc/acdbdata/ravelin_qrd_cust_eea/QRD_ravelin_eea_workspaceFileXml.qwsp
-vendor/etc/acdbdata/ravelin_qrd_cust_in/QRD_ravelin_in_acdb_cal.acdb
-vendor/etc/acdbdata/ravelin_qrd_cust_in/QRD_ravelin_in_workspaceFileXml.qwsp
-vendor/etc/acdbdata/ravelin_qrd_cust_jp/QRD_ravelin_jp_acdb_cal.acdb
-vendor/etc/acdbdata/ravelin_qrd_cust_jp/QRD_ravelin_jp_workspaceFileXml.qwsp
+vendor/etc/acdbdata/ravelin_qrd_cust_in/QRD_ravelin_in_acdb_cal.acdb:vendor/etc/acdbdata/ravelin_qrd/QRD_ravelin_in_acdb_cal.acdb
+vendor/etc/acdbdata/ravelin_qrd_cust_in/QRD_ravelin_in_workspaceFileXml.qwsp:vendor/etc/acdbdata/ravelin_qrd/QRD_ravelin_in_workspaceFileXml.qwsp
 
 # ADSP
 vendor/bin/adsprpcd
@@ -58,48 +48,18 @@ vendor/lib/rfsa/adsp/misound_res_spk.bin
 # ANT+
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
-# Audio graph manager
-vendor/bin/agmcap;MAKE_COPY_RULE_ONLY
-vendor/bin/agmcompressplay;MAKE_COPY_RULE_ONLY
-vendor/bin/agmplay;MAKE_COPY_RULE_ONLY
-vendor/bin/cplay;MAKE_COPY_RULE_ONLY
-vendor/bin/hw/vendor.qti.hardware.AGMIPC@1.0-service;MAKE_COPY_RULE_ONLY
-vendor/etc/init/vendor.qti.hardware.AGMIPC@1.0-service.rc
-vendor/lib64/libagm.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libagm_compress_plugin.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libagm_mixer_plugin.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libagm_pcm_plugin.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libagmclient.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libagmmixer.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/vendor.qti.hardware.AGMIPC@1.0.so;MAKE_COPY_RULE_ONLY
-
 # Audio libraries
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
-vendor/lib64/hw/audio.primary.parrot.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libadm.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libar-acdb.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libar-gpr.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libar-gsl.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libar-pal.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libats.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libaudio_log_utils.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libaudiocloudctrl.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libbatterylistener.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libcapiv2svacnnvendor.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libcapiv2svarnnvendor.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libcapiv2uvvendor.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libfmpal.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libkaraokepal.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/liblx-ar_util.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/liblx-osal.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libmcs.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libpalclient.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/libqtigefar.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/vendor.qti.hardware.pal@1.0-impl.so;MAKE_COPY_RULE_ONLY
-vendor/lib64/vendor.qti.hardware.pal@1.0.so;MAKE_COPY_RULE_ONLY
+vendor/lib64/libadm.so
+vendor/lib64/libaudio_log_utils.so
+vendor/lib64/libcapiv2svacnnvendor.so
+vendor/lib64/libcapiv2svarnnvendor.so
+vendor/lib64/libcapiv2uvvendor.so
+vendor/lib64/libmcs.so;DISABLE_CHECKELF
+vendor/lib64/libpal_net_if.so
+vendor/lib64/libqtigefar.so;DISABLE_CHECKELF
 
 # Audio soundfx
 vendor/lib64/soundfx/libasphere.so
@@ -773,7 +733,6 @@ vendor/lib64/liblocdiagiface.so|d7f1a5e5fc50fc60b1d07bebab3532f97b788118
 vendor/lib64/liblowi_client.so|65ed08928d01224d9d69e4520260c730b0f91eb3
 vendor/lib64/liblowi_common.so|85283ad9594dffd5c34741ebfd680ac154bd8b84
 vendor/lib64/liblowi_wifihal.so|f348c1a940e43a053dc18f46290c57e748935b0f
-vendor/lib64/libpal_net_if.so|1c7540e0a18df6e247193c0e7ad599ed2e413ce9
 vendor/lib64/libqppe.so|6cd36b618b3e50378f347316fcd11dffd0e4866e
 vendor/lib64/libsynergy_loc_api.so|884a2bd9cd9c0331c8c0cdb672b68257482c06b2
 vendor/lib64/libsys_info_cache.so|99b7796e09317215c4c8fd61359c2ceebcbe4dfe
