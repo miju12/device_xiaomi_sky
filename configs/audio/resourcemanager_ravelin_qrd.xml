@@ -430,7 +430,7 @@
                 <name>PAL_STREAM_VOICE_CALL</name>
                 <priority>2</priority>
                 <channels>1</channels>
-                <snd_device_name>speaker-mono-2</snd_device_name>
+                <snd_device_name>voice-speaker</snd_device_name>
             </usecase>
             <usecase>
                 <name>PAL_STREAM_VOIP_RX</name>
