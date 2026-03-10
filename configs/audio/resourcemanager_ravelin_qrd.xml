@@ -113,6 +113,7 @@
             </usecase>
             <usecase>
                 <name>PAL_STREAM_VOIP_TX</name>
+                <samplerate>16000</samplerate>
                 <priority>2</priority>
             </usecase>
             <usecase>
@@ -177,6 +178,7 @@
             <usecase>
                 <name>PAL_STREAM_VOIP_TX</name>
                 <priority>2</priority>
+                <samplerate>16000</samplerate>
             </usecase>
             <usecase>
                 <name>PAL_STREAM_VOICE_CALL</name>
@@ -216,7 +218,7 @@
             </usecase>
             <usecase>
                 <name>PAL_STREAM_VOIP_TX</name>
-                <samplerate>48000</samplerate>
+                <samplerate>16000</samplerate>
                 <bit_width>16</bit_width>
             </usecase>
             <usecase>
@@ -300,6 +302,7 @@
             <snd_device_name>usb-headset-mic</snd_device_name>
             <usecase>
                 <name>PAL_STREAM_VOIP_TX</name>
+                <samplerate>16000</samplerate>
             </usecase>
             <usecase>
                 <name>PAL_STREAM_LOW_LATENCY</name>
@@ -432,6 +435,7 @@
             <usecase>
                 <name>PAL_STREAM_VOIP_RX</name>
                 <priority>3</priority>
+                <samplerate>16000</samplerate>
                 <channels>1</channels>
                 <snd_device_name>speaker-mono-2</snd_device_name>
             </usecase>
@@ -462,6 +466,7 @@
           <usecase>
               <name>PAL_STREAM_VOIP_RX</name>
               <priority>3</priority>
+              <samplerate>16000</samplerate>
           </usecase>
           <usecase>
               <name>PAL_STREAM_ULTRASOUND</name>
@@ -505,7 +510,7 @@
            <usecase>
                <name>PAL_STREAM_VOIP_RX</name>
                <priority>2</priority>
-               <samplerate>48000</samplerate>
+               <samplerate>16000</samplerate>
                <bit_width>16</bit_width>
            </usecase>
         </out-device>
@@ -545,7 +550,7 @@
            <usecase>
                <name>PAL_STREAM_VOIP_RX</name>
                <priority>2</priority>
-               <samplerate>48000</samplerate>
+               <samplerate>16000</samplerate>
                <bit_width>16</bit_width>
            </usecase>
          </out-device>
