@@ -38,18 +38,16 @@
         <param key="hifi_filter" value="false"/>
         <param key="max_sessions" value="128"/>
         <param key="max_nonTunnel_sessions" value="4"/>
-        <param key="logging_level" value ="0" />
+        <param key="logging_level" value ="3" />
         <param key="context_manager_enable" value ="false" />
         <param key="lpi_logging_enable" value ="false" />
         <param key="upd_dedicated_be" value ="true" />
     </config_params>
     <config_volume>
-        <use_volume_set_param>1</use_volume_set_param>
+        <use_volume_set_param>0</use_volume_set_param>
         <supported_streams>
             <supported_stream>PAL_STREAM_ULTRA_LOW_LATENCY</supported_stream>
             <supported_stream>PAL_STREAM_COMPRESSED</supported_stream>
-            <supported_stream>PAL_STREAM_PCM_OFFLOAD</supported_stream>
-            <supported_stream>PAL_STREAM_VOIP_RX</supported_stream>
         </supported_streams>
     </config_volume>
     <config_lpm>
@@ -81,7 +79,7 @@
     <config_voice>
         <vsid>0xB3000000</vsid>
         <loopbackDelay>1000</loopbackDelay>
-        <maxVolIndex>11</maxVolIndex>
+        <maxVolIndex>5</maxVolIndex>
         <mode_map>
             <modepair key="0x11C05000" value="0xB3000001"/>
             <modepair key="0x11DC5000" value="0xB3000001"/>
@@ -103,7 +101,6 @@
             <snd_device_name>handset-mic</snd_device_name>
             <usecase>
                 <name>PAL_STREAM_LOW_LATENCY</name>
-                <snd_device_name>mainmic-ata</snd_device_name>
             </usecase>
             <usecase>
                 <name>PAL_STREAM_DEEP_BUFFER</name>
@@ -114,7 +111,6 @@
             </usecase>
             <usecase>
                 <name>PAL_STREAM_VOIP_TX</name>
-                <samplerate>16000</samplerate>
                 <priority>2</priority>
             </usecase>
             <usecase>
@@ -178,7 +174,6 @@
             </usecase>
             <usecase>
                 <name>PAL_STREAM_VOIP_TX</name>
-                <samplerate>16000</samplerate>
                 <priority>2</priority>
             </usecase>
             <usecase>
@@ -219,8 +214,7 @@
             </usecase>
             <usecase>
                 <name>PAL_STREAM_VOIP_TX</name>
-                <priority>3</priority>
-                <samplerate>16000</samplerate>
+                <samplerate>48000</samplerate>
                 <bit_width>16</bit_width>
             </usecase>
             <usecase>
@@ -232,11 +226,6 @@
             </usecase>
             <usecase>
                 <name>PAL_STREAM_ULTRA_LOW_LATENCY</name>
-                <priority>2</priority>
-                <samplerate>48000</samplerate>
-            </usecase>
-            <usecase>
-                <name>PAL_STREAM_LOOPBACK</name>
             </usecase>
             <ec_rx_device>
                 <id>PAL_DEVICE_OUT_WIRED_HEADSET</id>
@@ -309,7 +298,6 @@
             <snd_device_name>usb-headset-mic</snd_device_name>
             <usecase>
                 <name>PAL_STREAM_VOIP_TX</name>
-                <samplerate>16000</samplerate>
             </usecase>
             <usecase>
                 <name>PAL_STREAM_LOW_LATENCY</name>
@@ -399,7 +387,7 @@
         </in-device>
         <out-device>
             <id>PAL_DEVICE_NONE</id>
-            <back_end_name>CODEC_DMA-LPAIF_RXTX-RX-0</back_end_name>
+            <back_end_name>CODEC_DMA-LPAIF_WSA-RX-0</back_end_name>
             <max_channels>2</max_channels>
             <channels>1</channels>
             <snd_device_name>none</snd_device_name>
@@ -408,13 +396,13 @@
         </out-device>
         <out-device>
             <id>PAL_DEVICE_OUT_SPEAKER</id>
-            <back_end_name>CODEC_DMA-LPAIF_RXTX-RX-1</back_end_name>
+            <back_end_name>CODEC_DMA-LPAIF_WSA-RX-0</back_end_name>
             <max_channels>2</max_channels>
             <channels>1</channels>
             <samplerate>48000</samplerate>
             <bit_width>16</bit_width>
             <snd_device_name>speaker</snd_device_name>
-            <speaker_protection_enabled>0</speaker_protection_enabled>
+            <speaker_protection_enabled>1</speaker_protection_enabled>
             <fractional_sr>0</fractional_sr>
             <!-- To enable external EC reference the flag extec_ref_enabled must be added as 1 -->
             <ext_ec_ref_enabled>0</ext_ec_ref_enabled>
@@ -437,41 +425,23 @@
                 <name>PAL_STREAM_VOICE_CALL</name>
                 <priority>2</priority>
                 <channels>1</channels>
-                <snd_device_name>voice-speaker</snd_device_name>
+                <snd_device_name>speaker-mono-2</snd_device_name>
             </usecase>
             <usecase>
                 <name>PAL_STREAM_VOIP_RX</name>
                 <priority>3</priority>
-                <custom-config key="voip">
-                    <samplerate>16000</samplerate>
-                </custom-config>
+                <channels>1</channels>
+                <snd_device_name>speaker-mono-2</snd_device_name>
             </usecase>
             <usecase>
                 <name>PAL_STREAM_ULTRASOUND</name>
                 <priority>1</priority>
                 <samplerate>96000</samplerate>
             </usecase>
-            <usecase>
-                <name>PAL_STREAM_LOW_LATENCY</name>
-                <priority>4</priority>
-                <custom-config key="speaker_ata">
-                    <snd_device_name>speaker-ata</snd_device_name>
-                </custom-config>
-                <custom-config key="speaker">
-                    <snd_device_name>speaker-mmi</snd_device_name>
-                </custom-config>
-            </usecase>
-            <usecase>
-                <name>PAL_STREAM_PCM_OFFLOAD</name>
-                <priority>5</priority>
-                <custom-config key="speaker">
-                    <snd_device_name>speaker-mono-ata</snd_device_name>
-                </custom-config>
-            </usecase>
         </out-device>
         <out-device>
             <id>PAL_DEVICE_OUT_HANDSET</id>
-            <back_end_name>CODEC_DMA-LPAIF_RXTX-RX-2</back_end_name>
+            <back_end_name>CODEC_DMA-LPAIF_RXTX-RX-0</back_end_name>
             <max_channels>2</max_channels>
             <channels>1</channels>
             <!-- To enable external EC reference the flag extec_ref_enabled must be added as 1 -->
@@ -496,16 +466,6 @@
               <priority>1</priority>
               <samplerate>96000</samplerate>
           </usecase>
-            <usecase>
-                <name>PAL_STREAM_LOW_LATENCY</name>
-                <priority>4</priority>
-                    <snd_device_name>receiver-ata</snd_device_name>
-            </usecase>
-            <usecase>
-                <name>PAL_STREAM_PCM_OFFLOAD</name>
-                <priority>5</priority>
-                    <snd_device_name>handset-ata</snd_device_name>
-            </usecase>
         </out-device>
         <out-device>
             <id>PAL_DEVICE_OUT_WIRED_HEADPHONE</id>
@@ -539,14 +499,12 @@
                <priority>1</priority>
                <samplerate>48000</samplerate>
                <bit_width>16</bit_width>
-               <snd_device_name>voice-headphones</snd_device_name>
            </usecase>
            <usecase>
                <name>PAL_STREAM_VOIP_RX</name>
                <priority>2</priority>
                <samplerate>48000</samplerate>
                <bit_width>16</bit_width>
-               <snd_device_name>voice-headphones</snd_device_name>
            </usecase>
         </out-device>
         <out-device>
@@ -587,7 +545,6 @@
                <priority>2</priority>
                <samplerate>48000</samplerate>
                <bit_width>16</bit_width>
-               <snd_device_name>voice-headphones</snd_device_name>
            </usecase>
          </out-device>
         <out-device>
@@ -723,6 +680,7 @@
             <name>PAL_STREAM_VOIP_TX</name>
                 <policies>
                     <ec_ref>
+                        <disabled_stream>PAL_STREAM_LOW_LATENCY</disabled_stream>
                         <disabled_stream>PAL_STREAM_GENERIC</disabled_stream>
                     </ec_ref>
                 </policies>
@@ -952,13 +910,13 @@
             <param support_nlpi_switch="true" />
             <param transit_to_non_lpi_on_charging="false" />
             <!-- Param used to indicate if SVA has dedicated back end path and ports not conflicting with other audio paths  -->
-            <param dedicated_sva_path="false" />
+            <param dedicated_sva_path="true" />
             <param dedicated_headset_path="false" />
             <param lpi_enable="true" />
             <param enable_debug_dumps="false" />
-            <param concurrent_capture="false" />
-            <param concurrent_voice_call="false" />
-            <param concurrent_voip_call="false" />
+            <param concurrent_capture="true" />
+            <param concurrent_voice_call="true" />
+            <param concurrent_voip_call="true" />
             <param low_latency_bargein_enable="false" />
             <param mmap_enable="true" />
             <param mmap_buffer_duration="5000" />
@@ -1097,12 +1055,11 @@
             <param out_channels="1"/> <!-- Module output channels -->
             <param capture_keyword="1000" /> <!-- Default history buffer length -->
             <param client_capture_read_delay="2000" /> <!-- reserved buffer duration for rt data -->
-            <param second_stage_supported="false"/>
             <param pre_roll_duration="1000" /> <!-- Default preroll duration -->
             <operating_modes>
                 <low_power capture_profile_handset="SINGLE_MIC_16KHZ_16BIT_RAW_LPI" capture_profile_headset="SINGLE_MIC_16KHZ_16BIT_HEADSET_RAW_LPI"/>
-                <high_performance capture_profile_handset="SINGLE_MIC_16KHZ_16BIT_FFECNS" capture_profile_headset="SINGLE_MIC_16KHZ_16BIT_HEADSET_FFECNS"/>
-                <high_performance_and_charging capture_profile_handset="SINGLE_MIC_16KHZ_16BIT_FFECNS" capture_profile_headset="SINGLE_MIC_16KHZ_16BIT_HEADSET_FFECNS"/>
+                <high_performance capture_profile_handset="DUAL_MIC_16KHZ_16BIT_FFECNS" capture_profile_headset="SINGLE_MIC_16KHZ_16BIT_HEADSET_FFECNS"/>
+                <high_performance_and_charging capture_profile_handset="DUAL_MIC_16KHZ_16BIT_FFECNS" capture_profile_headset="SINGLE_MIC_16KHZ_16BIT_HEADSET_FFECNS"/>
             </operating_modes>
             <arm_ss_usecase>
                 <!-- Options are "KEYWORD_DETECTION", "USER_VERIFICATION", "CUSTOM_DETECTION"  -->
@@ -1148,7 +1105,7 @@
         <!-- Hotword -->
         <sound_model_config>
             <param vendor_uuid="7038ddc8-30f2-11e6-b0ac-40a8f03d3f15"/>
-            <param get_module_version="true" />
+            <param get_module_version="false" />
             <param kw_start_tolerance="100" />
             <param kw_end_tolerance="100" />
             <param merge_first_stage_sound_models="false"/>
@@ -1162,8 +1119,8 @@
             <param client_capture_read_delay="2000" />
             <operating_modes>
                 <low_power capture_profile_handset="SINGLE_MIC_16KHZ_16BIT_RAW_LPI" capture_profile_headset="SINGLE_MIC_16KHZ_16BIT_HEADSET_RAW_LPI"/>
-                <high_performance capture_profile_handset="SINGLE_MIC_16KHZ_16BIT_RAW_NLPI" capture_profile_headset="SINGLE_MIC_16KHZ_16BIT_HEADSET_RAW_NLPI"/>
-                <high_performance_and_charging capture_profile_handset="SINGLE_MIC_16KHZ_16BIT_RAW_NLPI" capture_profile_headset="SINGLE_MIC_16KHZ_16BIT_HEADSET_RAW_NLPI"/>
+                <high_performance capture_profile_handset="DUAL_MIC_16KHZ_16BIT_RAW_NLPI" capture_profile_headset="SINGLE_MIC_16KHZ_16BIT_HEADSET_RAW_NLPI"/>
+                <high_performance_and_charging capture_profile_handset="DUAL_MIC_16KHZ_16BIT_RAW_NLPI" capture_profile_headset="SINGLE_MIC_16KHZ_16BIT_HEADSET_RAW_NLPI"/>
             </operating_modes>
             <module_params>
                 <param module_type="HOTWORD" />
