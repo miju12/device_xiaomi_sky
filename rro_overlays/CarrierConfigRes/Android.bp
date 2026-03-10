@@ -1,4 +1,4 @@
 runtime_resource_overlay {
-    name: "CarrierConfigOverlay",
+    name: "CarrierConfigRes",
     aaptflags: ["--keep-raw-values"],
 }
