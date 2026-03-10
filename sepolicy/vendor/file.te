@@ -30,3 +30,6 @@ type proc_proximity_ts, proc_type, fs_type;
 # Thermal
 type sys_thermal_flash_state, fs_type, sysfs_type;
 type thermal_data_file, data_file_type, file_type;
+
+# Walt
+type proc_walt, fs_type, proc_type;
