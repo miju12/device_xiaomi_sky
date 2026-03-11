@@ -335,6 +335,21 @@
         <ctl name="RX_RX2 Digital Volume" value="80" />
     </path>
 
+    <path name="speaker-ata">
+        <ctl name="RX_MACRO RX2 MUX" value="AIF2_PB" />
+        <ctl name="RX INT2_1 MIX1 INP0" value="RX2" />
+        <ctl name="AUX_RDAC Switch" value="1" />
+    </path>
+
+    <path name="receiver-ata">
+        <ctl name="RX_MACRO RX4 MUX" value="AIF3_PB" />
+        <ctl name="RX INT0_1 MIX1 INP0" value="RX4" />
+        <ctl name="RX INT0 DEM MUX" value="CLSH_DSM_OUT" />
+        <ctl name="EAR_RDAC Switch" value="1" />
+        <ctl name="RDAC3_MUX" value="RX1" />
+        <ctl name="RX_EAR Mode" value="ON" />
+    </path>
+
     <path name="haptics-dev">
         <ctl name="SWR DAC_Port Switch" value="1" />
     </path>
@@ -493,6 +508,16 @@
         <ctl name="EAR_RDAC Switch" value="1" />
         <ctl name="RDAC3_MUX" value="RX1" />
         <ctl name="RX_EAR Mode" value="ON" />
+    </path>
+
+    <path name="handset-ata">
+        <ctl name="RX_MACRO RX4 MUX" value="AIF3_PB" />
+        <ctl name="RX INT0_1 MIX1 INP0" value="RX4" />
+        <ctl name="RX INT0 DEM MUX" value="CLSH_DSM_OUT" />
+        <ctl name="EAR_RDAC Switch" value="1" />
+        <ctl name="RDAC3_MUX" value="RX1" />
+        <ctl name="RX_EAR Mode" value="ON" />
+        <ctl name="RX_RX0 Digital Volume" value="87" />
     </path>
 
     <path name="handset-mic">

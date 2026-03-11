@@ -664,6 +664,18 @@
                 <!-- DEVICEPP_RX - DEVICEPP_RX_AUDIO_MBDRC -->
                 <graph_kv key="0xAC000000" value="0xAC000002"/>
             </keys_and_values>
+            <keys_and_values StreamType="PAL_STREAM_LOW_LATENCY">
+                <!-- DEVICERX - SPEAKER -->
+                <graph_kv key="0xA2000000" value="0xA2000001"/>
+                <!-- DEVICEPP_RX - DEVICEPP_RX_DEFAULT -->
+                <graph_kv key="0xAC000000" value="0xAC000001"/>
+            </keys_and_values>
+            <keys_and_values StreamType="PAL_STREAM_PCM_OFFLOAD">
+                <!-- DEVICERX - SPEAKER -->
+                <graph_kv key="0xA2000000" value="0xA2000001"/>
+                <!-- DEVICEPP_RX - DEVICEPP_RX_DEFAULT -->
+                <graph_kv key="0xAC000000" value="0xAC000001"/>
+            </keys_and_values>
             <keys_and_values StreamType="PAL_STREAM_VOIP_RX">
                 <!-- DEVICERX - SPEAKER -->
                 <graph_kv key="0xA2000000" value="0xA2000001"/>

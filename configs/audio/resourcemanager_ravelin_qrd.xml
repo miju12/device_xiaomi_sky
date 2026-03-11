@@ -230,6 +230,7 @@
             </usecase>
             <usecase>
                 <name>PAL_STREAM_ULTRA_LOW_LATENCY</name>
+                <samplerate>48000</samplerate>
             </usecase>
             <ec_rx_device>
                 <id>PAL_DEVICE_OUT_WIRED_HEADSET</id>
@@ -444,6 +445,16 @@
                 <priority>1</priority>
                 <samplerate>96000</samplerate>
             </usecase>
+            <usecase>
+                <name>PAL_STREAM_LOW_LATENCY</name>
+                <priority>4</priority>
+                <snd_device_name>speaker-ata</snd_device_name>
+            </usecase>
+            <usecase>
+                <name>PAL_STREAM_PCM_OFFLOAD</name>
+                <priority>5</priority>
+                <snd_device_name>speaker-ata</snd_device_name>
+            </usecase>
         </out-device>
         <out-device>
             <id>PAL_DEVICE_OUT_HANDSET</id>
@@ -473,6 +484,16 @@
               <priority>1</priority>
               <samplerate>96000</samplerate>
           </usecase>
+            <usecase>
+                <name>PAL_STREAM_LOW_LATENCY</name>
+                <priority>4</priority>
+                <snd_device_name>receiver-ata</snd_device_name>
+            </usecase>
+            <usecase>
+                <name>PAL_STREAM_PCM_OFFLOAD</name>
+                <priority>5</priority>
+                <snd_device_name>handset-ata</snd_device_name>
+            </usecase>
         </out-device>
         <out-device>
             <id>PAL_DEVICE_OUT_WIRED_HEADPHONE</id>
@@ -687,7 +708,6 @@
             <name>PAL_STREAM_VOIP_TX</name>
                 <policies>
                     <ec_ref>
-                        <disabled_stream>PAL_STREAM_LOW_LATENCY</disabled_stream>
                         <disabled_stream>PAL_STREAM_GENERIC</disabled_stream>
                     </ec_ref>
                 </policies>
