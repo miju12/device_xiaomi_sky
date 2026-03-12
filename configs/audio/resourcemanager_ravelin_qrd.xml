@@ -105,11 +105,16 @@
                 <name>PAL_STREAM_LOW_LATENCY</name>
             </usecase>
             <usecase>
+                <name>PAL_STREAM_VOICE_RECOGNITION</name>
+                <channels>1</channels>
+                <samplerate>16000</samplerate>
+                <snd_device_name>va-mic-asr</snd_device_name>
+            </usecase>
+            <usecase>
                 <name>PAL_STREAM_DEEP_BUFFER</name>
-                <custom-config key="dual-mic-eans">
-                    <channels>2</channels>
-                    <snd_device_name>handset-dmic-endfire</snd_device_name>
-                </custom-config>
+                <channels>1</channels>
+                <samplerate>16000</samplerate>
+                <snd_device_name>va-mic-asr</snd_device_name>
             </usecase>
             <usecase>
                 <name>PAL_STREAM_VOIP_TX</name>
