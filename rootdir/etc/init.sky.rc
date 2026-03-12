@@ -65,6 +65,10 @@ on early-init && property:ro.product.device=XIG03
     setprop ro.vendor.nfc.repair 1
     setprop persist.vendor.nfc.factory.fwstatus unknown
 
+on early-boot
+    chown system system /sys/class/leds/vibrator/vmax_mv
+    chmod 0600 /sys/class/leds/vibrator/vmax_mv
+
 on property:persist.sys.xtra-daemon.enabled=*
     restart loc_launcher
 
