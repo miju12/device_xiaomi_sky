@@ -475,9 +475,7 @@
           <usecase>
               <name>PAL_STREAM_VOICE_CALL</name>
               <priority>2</priority>
-              <custom-config key="HAC">
-                 <snd_device_name>voice-handset-hac</snd_device_name> <!-- override sound device name with HAC handset -->
-              </custom-config>
+              <snd_device_name>voice-handset</snd_device_name>
           </usecase>
           <usecase>
               <name>PAL_STREAM_VOIP_RX</name>
