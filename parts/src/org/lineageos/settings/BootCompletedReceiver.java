@@ -24,6 +24,7 @@ import android.util.Log;
 import android.content.SharedPreferences;
 import androidx.preference.PreferenceManager;
 
+import org.lineageos.settings.utils.VibrationUtils;
 import org.lineageos.settings.utils.FastChargeUtils;
 import org.lineageos.settings.display.LcdFeaturesService;
 import org.lineageos.settings.thermal.ThermalUtils;
@@ -48,6 +49,10 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
             boolean fastChargeEnabled = sharedPrefs.getBoolean("fast_charge_enable", false);
             FastChargeUtils.setFastChargeEnabled(fastChargeEnabled);
+
+	// Restore Vibration Strength
+            int vibStrength = sharedPrefs.getInt("vibration_strength", 80);
+            VibrationUtils.setVibrationStrength(vibStrength);
         }
     }
 }

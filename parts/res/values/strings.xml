@@ -38,4 +38,7 @@
     <string name="fast_charge_title">Force USB Fast Charge</string>
     <string name="fast_charge_summary">Bypass standard USB limits to draw up to 1.5A</string>
 
+   <!-- Vibrator  -->
+    <string name="vibration_title">Haptic Motor Strength</string>
+    <string name="vibration_summary">Adjust the physical voltage of the vibration motor</string>
 </resources>
