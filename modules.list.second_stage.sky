@@ -269,3 +269,4 @@ rmnet_sch.ko
 msm_drm.ko
 msm-mmrm.ko
 msm_video.ko
+fs15xx_dlkm.ko
