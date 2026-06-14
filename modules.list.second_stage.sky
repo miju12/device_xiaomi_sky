@@ -98,7 +98,6 @@ xiaomi_touch_notifier.ko
 xiaomi_usb_touch_notifier.ko
 xiaomi_headset_touch_notifier.ko
 bootinfo.ko
-perf_helper.ko
 hardware_info.ko
 qcom-i2c-pmic.ko
 nfc_i2c.ko

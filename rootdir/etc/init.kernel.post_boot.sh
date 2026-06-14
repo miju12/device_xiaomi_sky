@@ -130,7 +130,7 @@ function configure_memory_parameters() {
 		echo 4096 > /proc/sys/vm/min_free_kbytes
 	fi
 
-	echo 60 > /proc/sys/vm/watermark_scale_factor
+	echo 1 > /proc/sys/vm/watermark_scale_factor
 
 	#Set per-app max kgsl reclaim limit and per shrinker call limit
 	if [ -f /sys/class/kgsl/kgsl/page_reclaim_per_call ]; then

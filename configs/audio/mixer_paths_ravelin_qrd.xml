@@ -593,6 +593,7 @@
 
     <path name="voice-handset">
         <ctl name="RX_RX0 Digital Volume" value="87" />
+        <ctl name="Awinic Profile" value="1" />
         <path name="handset" />
     </path>
 

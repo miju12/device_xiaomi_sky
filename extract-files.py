@@ -108,6 +108,10 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed(
             'libjnigraphics.so', 'libjnigraphics_prebuilt.so'
         ),
+    'vendor/lib64/libmisight.so': blob_fixup()
+        .add_needed(
+            'libjsoncpp_shim.so'
+        ),
     'vendor/lib64/libopencv_java4.so': blob_fixup()
         .replace_needed(
             'libjnigraphics.so', 'libjnigraphics_prebuilt.so'
